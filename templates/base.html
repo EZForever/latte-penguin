@@ -36,6 +36,7 @@
     {% if TAG_FEED_RSS and tag %}
     <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS.format(slug=tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
     {% endif %}
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/catppuccin-latte.css" type="text/css" />
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" type="text/css" />
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css" type="text/css" />
     <meta name="generator" content="Pelican" />
@@ -83,7 +84,7 @@
             <div class="clear"></div>
             <footer>
                 <p>
-                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
+                <a href="https://github.com/EZForever/latte-penguin">Latte Penguin</a> Theme
                 &middot;
                 Powered by <a href="http://getpelican.com">Pelican</a>
                  {% if FEED_ALL_ATOM %}
@@ -94,6 +95,7 @@
                 &middot;
                 <a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" rel="alternate">Rss Feed</a>
                  {% endif %}
+                </p>
             </footer>
             {% endif %}
         </div>

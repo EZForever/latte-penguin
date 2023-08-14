@@ -1,7 +1,5 @@
-![screenshot](screenshot.png)
-
-# Blue Penguin for pelican
-A simple theme for pelican. Solarized pygments. Feeds support.
+# Latte Penguin for Pelican
+Fork of [Blue Penguin](https://github.com/jody-frankowski/blue-penguin) with warm colors from the [Catppuccin](https://github.com/catppuccin/catppuccin) Latte palette, while keeping the original vibe.
 
 ## Settings
 ```python
