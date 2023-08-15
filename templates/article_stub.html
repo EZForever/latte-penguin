@@ -13,8 +13,7 @@
 		{% include "translations.html" %}
 		{% endif %}                
                 
-
-                {{ article.content }}
+                {{ article.summary or article.content }}
                 <div class="clear"></div>
 
                 <div class="info">

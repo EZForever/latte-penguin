@@ -3,7 +3,7 @@
 {%- endmacro -%}
 
 <!DOCTYPE html>
-<html lang="{{ DEFAULT_LANG }}">
+<html lang="{{ DEFAULT_LANG|replace('_','-') }}">
 <head>
     {% block head %}
     <meta charset="utf-8" />
@@ -59,11 +59,11 @@
                 <li{% if p == page %} class="selected"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
                 {% endfor %}
                 {% endif %}
-                {% for title, link in MENUITEMS %}
-                <li><a href="{{ link }}">{{ title }}</a></li>
-                {% endfor %}
                 {% for name, link, file in MENU_INTERNAL_PAGES %}
                 <li{% if output_file == file %} class="selected"{% endif %}><a href="{{ SITEURL }}/{{ link }}">{{ name }}</a></li>
+                {% endfor %}
+                {% for title, link in MENUITEMS %}
+                <li><a href="{{ link }}">{{ title }}</a></li>
                 {% endfor %}
             </ul>
         </nav>
@@ -83,6 +83,11 @@
             {% if DISPLAY_FOOTER or DISPLAY_FOOTER is not defined %}
             <div class="clear"></div>
             <footer>
+                {% if SITECOPYRIGHT %}
+                <p>
+                    {{ SITECOPYRIGHT }}
+                </p>
+                {% endif %}
                 <p>
                 <a href="https://github.com/EZForever/latte-penguin">Latte Penguin</a> Theme
                 &middot;

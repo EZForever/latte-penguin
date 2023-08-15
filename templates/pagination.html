@@ -1,17 +1,18 @@
 {# Use PAGINATION_PATTERNS or pagination may break #}
 {% if DEFAULT_PAGINATION and (articles_page.has_previous() or articles_page.has_next()) %}
-
-                <div class="clear"></div>
                 <div class="pages">
-
                 {% if articles_page.has_previous() %}
-                    <a href="{{ SITEURL }}/{{ articles_previous_page.url }}" class="prev_page">&larr;&nbsp;Previous</a>
+                    <a href="{{ SITEURL }}/{{ articles_previous_page.url }}" class="prev_page">&laquo;&nbsp;Newer Posts</a>
+                {% else %}
+                    <a class="prev_page">&laquo;&nbsp;Newer Posts</a>
                 {% endif %}
-
-                {% if articles_page.has_next() %}
-                    <a href="{{ SITEURL }}/{{ articles_next_page.url }}" class="next_page">Next&nbsp;&rarr;</a>
-                {% endif %}
-
+                    &nbsp;&middot;&nbsp;
                     <span>Page {{ articles_page.number }} of {{ articles_paginator.num_pages }}</span>
+                    &nbsp;&middot;&nbsp;
+                {% if articles_page.has_next() %}
+                    <a href="{{ SITEURL }}/{{ articles_next_page.url }}" class="next_page">Older Posts&nbsp;&raquo;</a>
+                {% else %}
+                    <a class="next_page">Older Posts&nbsp;&raquo;</a>
+                {% endif %}
                 </div>
 {% endif %}

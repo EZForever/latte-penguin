@@ -8,6 +8,9 @@ Fork of [Blue Penguin](https://github.com/jody-frankowski/blue-penguin) with war
 # HTML metadata
 SITEDESCRIPTION = ''
 
+# shows in page footer
+SITECOPYRIGHT = ''
+
 # all defaults to True.
 DISPLAY_HEADER = True
 DISPLAY_FOOTER = True
