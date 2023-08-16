@@ -9,11 +9,13 @@
                 </h2>
                 {% endif %}
 
-		{% if not articles_page %}
-		{% include "translations.html" %}
-		{% endif %}                
-                
-                {{ article.summary or article.content }}
+                {% if articles_page %}
+                    {{ article.summary or article.content }}
+                {% else %}
+                    {% include "translations.html" %}
+                    {{ article.content }}
+                {% endif %}
+
                 <div class="clear"></div>
 
                 <div class="info">
