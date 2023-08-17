@@ -234,10 +234,6 @@ sub {
     text-align: justify;
 }
 
-.page {
-    margin: 0 90px;
-}
-
 .highlight {
     border-radius: 5px;
     background-color: var(--ctp-latte-mantle) !important;
